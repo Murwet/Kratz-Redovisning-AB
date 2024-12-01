@@ -1149,6 +1149,53 @@ section,
     margin-top: 0;
   }
 }
+/*--------------------------------------------------------------
+# Details Section
+--------------------------------------------------------------*/
+.details .features-item {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.details .features-item+.features-item {
+  margin-top: 100px;
+}
+
+@media (max-width: 640px) {
+  .details .features-item+.features-item {
+    margin-top: 40px;
+  }
+}
+
+.details .features-item h3 {
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.details .features-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.details .features-item ul li {
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.details .features-item ul li:last-child {
+  padding-bottom: 0;
+}
+
+.details .features-item ul i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: var(--accent-color);
+}
+
+.details .features-item p:last-child {
+  margin-bottom: 0;
+}
+
 
 /*--------------------------------------------------------------
 # Testimonials Section
@@ -1557,4 +1604,24 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+.footer-contact p {
+  position: relative;
+  font-size: 16px;  /* Du kan justera storleken om du vill */
+  color: #333;      /* Standardfärg för texten */
+}
+
+.footer-contact p:before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: -4px;  /* Strecket placeras precis under texten */
+  left: 0;
+  width: 0;
+  background-color: var(--nav-hover-color);  /* Färgen på strecket, du kan använda din egen färg */
+  transition: width 0.3s ease-in-out;
+}
+
+.footer-contact p:hover:before {
+  width: 100%;  /* Gör strecket lika brett som texten när man hovrar */
 }
