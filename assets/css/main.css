@@ -1625,3 +1625,9 @@ section,
 .footer-contact p:hover:before {
   width: 100%;  /* Gör strecket lika brett som texten när man hovrar */
 }
+
+
+.ratio {
+  width: 400px; /* Anpassar bredden */
+  height: 200px; /* Ställ in önskad höjd */
+}
