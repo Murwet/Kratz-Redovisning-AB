@@ -311,7 +311,7 @@ h6 {
   .navmenu li:hover>a:before,
   .navmenu .active:before {
     visibility: visible;
-    width: 25px;
+    width: 35px;
   }
 
   .navmenu li:hover>a,
@@ -651,6 +651,43 @@ h6 {
   font-size: 13px;
   color: color-mix(in srgb, var(--default-color), transparent 50%);
 }
+.footer-contact p {
+  position: relative;
+  font-size: 16px;  /* Du kan justera storleken om du vill */
+  color: #333;      /* Standardfärg för texten */
+}
+
+.footer-contact p:before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: -4px;  /* Strecket placeras precis under texten */
+  left: 0;
+  width: 0;
+  background-color: var(--nav-hover-color);  /* Färgen på strecket, du kan använda din egen färg */
+  transition: width 0.3s ease-in-out;
+}
+
+/* .footer-contact p:hover:before {
+  visibility: visible;
+  width: 120px;}
+ */
+
+
+
+#adress-footer:hover:before {
+  visibility: visible;
+  width: 110px;
+}
+#footer-number:hover:before {
+  visibility: visible;
+  width: 145px;
+}
+#footer-mail:hover:before {
+  visibility: visible;
+  width: 218.5px;
+}
+
 
 /*--------------------------------------------------------------
 # Preloader
@@ -1196,6 +1233,10 @@ section,
   margin-bottom: 0;
 }
 
+.col-md-5 img {
+  width: 700px; /* Exempelstorlek */
+  height: 300px;
+}
 
 /*--------------------------------------------------------------
 # Testimonials Section
@@ -1605,33 +1646,9 @@ section,
 .starter-section {
   /* Add your styles here */
 }
-.footer-contact p {
-  position: relative;
-  font-size: 16px;  /* Du kan justera storleken om du vill */
-  color: #333;      /* Standardfärg för texten */
-}
-
-.footer-contact p:before {
-  content: "";
-  position: absolute;
-  height: 2px;
-  bottom: -4px;  /* Strecket placeras precis under texten */
-  left: 0;
-  width: 0;
-  background-color: var(--nav-hover-color);  /* Färgen på strecket, du kan använda din egen färg */
-  transition: width 0.3s ease-in-out;
-}
-
-.footer-contact p:hover:before {
-  width: 100%;  /* Gör strecket lika brett som texten när man hovrar */
-}
 
 
 .ratio {
   width: 400px; /* Anpassar bredden */
   height: 200px; /* Ställ in önskad höjd */
 }
-
-
-
-
